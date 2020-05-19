@@ -38,14 +38,14 @@ let i = 0;
 
 do {
     var Answer1 = prompt('Введите обязательную статью расходов в этом месяце'),
-    Answer2 = prompt('Во сколько обойдется?');
-if ((typeof (Answer1) === 'string') && (typeof (Answer1) != null) && (typeof (Answer2) === 'string') && (typeof (Answer2) != null) && Answer1 != '' && Answer2 != '' && Answer1.length < 50) {
+        Answer2 = prompt('Во сколько обойдется?');
+    if ((typeof (Answer1) === 'string') && (typeof (Answer1) != null) && (typeof (Answer2) === 'string') && (typeof (Answer2) != null) && Answer1 != '' && Answer2 != '' && Answer1.length < 50) {
     appData.expenses[Answer1] = Answer2;
-    i++;
-} else {
+        i++;
+    } else {
     console.log('Answer error');
-    alert('Поля обязательны для заполнения, попробуйте еще раз.');
-}
+        alert('Поля обязательны для заполнения, попробуйте еще раз.');
+    }
 } while (i < 2);
 
 appData.moneyPerDay = appData.budjet / 30;
